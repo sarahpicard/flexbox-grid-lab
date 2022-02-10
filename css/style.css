@@ -14,8 +14,142 @@ html {
 }
 
 body {
-  background-color: darkolivegreen;
+  background-color: #462255;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  font-size: 10px;
 }
+
+#brand {
+  display: none;
+}
+
+img {
+  border-radius: 50%;
+  border: 4px solid #7EE081;
+}
+
+main {
+  width: 25%;
+  background-color: whitesmoke;
+}
+
+#status {
+  font-size: 12px;
+  text-align: right;
+  padding: 5px;
+  color: gray;
+}
+
+h1 {
+  margin: 10px;
+  padding: 5x;
+}
+
+#occupation {
+  background-color: #dedede;
+  padding: 1px;
+}
+
+#offer {
+  padding: 6px;
+}
+
+#contact {
+  display: flex;
+}
+
+#phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 40px;
+  width: 50%;
+  background-color: #c3f3c0;
+}
+
+#messaging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 40px; 
+  width: 50%;
+  background-color: #7ee081;
+}
+
+/* ----------------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+  main {
+    display: grid;
+    text-align: left;
+    width: 500px;
+    height: 250px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "status name"
+      "img occupation"
+      "img brand" 
+      "contact offer";
+  }
+  
+  h1 {
+    padding: 10px;
+    margin: 0;
+  }
+
+  #status {
+    text-align: left;
+    padding: 10px 0 0 20px;
+  }
+
+  img {
+    grid-area: img;
+    margin: auto;
+  }
+
+  #brand {
+    display: inline;
+    font-size: 8px;
+  }
+
+  #contact {
+    grid-area: contact;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+
+  #brand > p {
+    border-left: green 4px solid;
+    padding: 0 20px 0 8px;
+    font-size: 1.6rem;
+  }
+
+  #offer {
+    font-size: 1.4rem;
+    padding: 0px;
+  }
+
+  #occupation {
+    font-size: 10px;
+  }
+
+  #name, #occupation, #brand, #offer {
+    padding-left: 20px;
+    background-color: lightgray;
+  }
+}
+
+
+
